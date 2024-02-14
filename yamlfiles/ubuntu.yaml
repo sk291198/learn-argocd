@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    run: ubuntu
+  name: ubuntu
+  namespace: my-nginx
+spec:
+  containers:
+  - command:
+    - sleep
+    - "10000"
+    image: ubuntu
+    name: ubuntu
