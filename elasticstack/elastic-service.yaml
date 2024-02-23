@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    app: elastic-service
+  name: elastic-service
+  namespace: elastic-kibana
+spec:
+  ports:
+  - name: 9200-9200
+    port: 9200
+    protocol: TCP
+    targetPort: 9200
+  selector:
+    run: elasticsearch
+  type: ClusterIP
+status:
+  loadBalancer: {}
