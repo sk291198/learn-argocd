@@ -12,7 +12,7 @@ spec:
     port: 5601
     protocol: TCP
     targetPort: 5601
-    NodePort: 32325
+    nodePort: 32325
   selector:
     run: kibana
   type: NodePort
